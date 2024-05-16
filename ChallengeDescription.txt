@@ -1,0 +1,34 @@
+# Coding Exercise: Implement Conway's Game of Life
+
+## Description
+
+In this exercise, you are tasked with implementing Conway's Game of Life. The Game of Life is a cellular automaton devised by the British mathematician John Horton Conway in 1970. It is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input.
+
+Refer to https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
+
+You will implement this game using C++ and the observer design pattern. The game will consist of three main classes: `Cell`, `ConsoleOutput`, and `GameOfLife`.
+
+## Requirements
+
+1. **Game logic implementation**: Implement Cell, GameOfLife and ConsoleOutput classes. If possible, don't change class definitions. You may change initialization and game running logic in main.cpp including update() function of GameOfLife class.
+
+2. **Observer Pattern**: Implement console output of the game state via observer pattern. Grid will be printed out to stdout after each iteration. The `GameOfLife` class should notify all registered observers, whenever the state of the game changes. The observers should implement an `Observer` interface that includes a method `onGridChange`.
+
+3. **Memory Management**: Use `std::shared_ptr` for storing and managing the cells.
+
+Compilation and binary usage are in README.md file.
+
+Example output of one game iterration:
+
+..XX.XX...
+.X....XX..
+.......X..
+X.X...X...
+X..X..X...
+XXX.XXXXX.
+X........X
+X........X
+XX........
+..XXX.XX..
+
+
